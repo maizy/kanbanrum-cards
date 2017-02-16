@@ -1,37 +1,34 @@
 @import '../../node_modules/bootstrap/less/bootstrap.less';
 
 body {
-  padding: 30px;
-  margin: 30px;
+  padding: 2vh 2vw;
 }
 
-@base-card-font-size: 30px;
-@card-color: #8af023;
+@card-color: #71f04c;
 @card-text-color: #050505;
 
 .large-card {
-  @card-height: 230px;
+  @card-height: 80vh;
+  @card-width: 100%;
+  @base-font-size: 40vh;
   .card-name {
-    font-size: 150px;
-    background: @card-color;
-    margin: @card-height / 30;
-    height: @card-height;
+    font-size: @base-font-size;
     text-align: center;
     color: @card-text-color;
-    padding: 0 @card-height / 20;
+    background: @card-color;
+    height: @card-height;
+    width: @card-width;
   }
 
   .back {
-    @back-height: 40px;
-    font-size: @back-height;
+    @back-height: 10vh;
+    font-size: @back-height * 0.8;
     height: @back-height;
     a {
       display: inline-block;
       height: @back-height;
+      width: @card-width;
       background: gray;
-      margin: 0 @card-height / 10 @card-height / 10 @card-height / 10;
-      width: 200px;
-      font-size: @base-card-font-size * 1.5;
       text-decoration: none;
       text-align: center;
       line-height: @back-height;
@@ -41,8 +38,8 @@ body {
 }
 
 .small-card {
-  @card-height: 100px;
-  @card-width: 100px;
+  @card-height: 19vw;
+  @card-width: @card-height;
   width: @card-width;
   height: @card-height;
   background: @card-color;
@@ -52,7 +49,7 @@ body {
     display: inline-block;
     width: @card-width;
     height: @card-height;
-    font-size: @base-card-font-size * 1.5;
+    font-size: @card-width * 0.5;
     text-decoration: none;
     text-align: center;
     line-height: @card-height;

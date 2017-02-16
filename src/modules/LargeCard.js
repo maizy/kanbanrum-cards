@@ -6,15 +6,38 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-function LargeCard(props) {
-  return (
-    <div className="large-card">
-      <div className="card-name">{props.card.get('name')}</div>
-      <div className="back">
-        <Link to="/">&#x21A9;</Link>
+class LargeCard extends React.Component {
+
+  constructor() {
+    super();
+    this.state = {
+      hidden: true,
+    };
+
+    // prebind
+    [
+      'handleRotate',
+    ].map((f) => (this[f] = this[f].bind(this)));
+  }
+
+  handleRotate() {
+    this.setState({ hidden: !this.state.hidden });
+  }
+
+  render() {
+    const content = this.state.hidden
+      ? <div className="card-back" onClick={this.handleRotate} />
+      : <div className="card-name" onClick={this.handleRotate}>{this.props.card.get('name')}</div>;
+
+    return (
+      <div className="large-card">
+        {content}
+        <div className="back">
+          <Link to="/">&#x21A9;</Link>
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 LargeCard.propTypes = {

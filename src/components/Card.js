@@ -10,37 +10,18 @@ import LargeCard from '../modules/LargeCard';
 import ErrorAlert from '../modules/ErrorAlert';
 import appOpts from '../AppOpts';
 
-class Card extends React.Component {
+function Card(props) {
+  const cardId = props.params.cardId;
+  const mayBeCard = appOpts.cards.find(card => card.get('id') === cardId);
+  const content = mayBeCard === undefined
+    ? <ErrorAlert message="card not found" />
+    : <LargeCard card={mayBeCard} />;
 
-  constructor() {
-    super();
-    this.state = {
-      hidden: true,
-    };
-
-    // prebind
-    [
-      'handleRotate',
-    ].map((f) => (this[f] = this[f].bind(this)));
-  }
-
-  handleRotate() {
-    this.setState({ hidden: !this.state.hidden });
-  }
-
-  render() {
-    const cardId = this.props.params.cardId;
-    const mayBeCard = appOpts.cards.find(card => card.get('id') === cardId);
-    const content = mayBeCard === undefined
-      ? <ErrorAlert message="card not found" />
-      : <LargeCard card={mayBeCard} />;
-
-    return (
-      <Container>
-        {content}
-      </Container>
-    );
-  }
+  return (
+    <Container>
+      {content}
+    </Container>
+  );
 }
 
 Card.propTypes = {

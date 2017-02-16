@@ -22,14 +22,17 @@ const paths = {
   bundle: 'app.js',
   entry: 'src/Index.js',
   srcCss: 'src/**/*.less',
+  srcImg: 'src/images/**',
   srcLint: ['src/**/*.js', 'test/**/*.js', 'gulpfile.babel.js'],
   dist: 'dist',
   distJs: 'dist/js',
+  distImg: 'dist/images',
 };
 
 const releasePaths = {
   dist: 'docs',
   distJs: 'docs/js',
+  distImg: 'docs/images',
 };
 
 const customOpts = {
@@ -103,6 +106,11 @@ gulp.task('styles', () => {
   .pipe(reload({ stream: true }));
 });
 
+gulp.task('images', () => {
+  gulp.src(paths.srcImg)
+  .pipe(gulp.dest(paths.distImg));
+});
+
 gulp.task('htmlReplace', () => {
   gulp.src('index.html')
   .pipe(
@@ -127,12 +135,12 @@ gulp.task('watchTask', () => {
 });
 
 gulp.task('watch', cb => {
-  runSequence('clean', ['browserSync', 'watchTask', 'watchify', 'styles', 'lint'], cb);
+  runSequence('clean', ['browserSync', 'watchTask', 'watchify', 'styles', 'lint', 'images'], cb);
 });
 
 gulp.task('build', cb => {
   process.env.NODE_ENV = 'production';
-  runSequence('clean', ['lint', 'browserify', 'styles', 'htmlReplace'], cb);
+  runSequence('clean', ['lint', 'browserify', 'styles', 'htmlReplace', 'images'], cb);
 });
 
 gulp.task('release', cb => {

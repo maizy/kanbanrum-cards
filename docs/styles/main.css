@@ -6637,49 +6637,54 @@ button.close {
   }
 }
 body {
-  padding: 30px;
-  margin: 30px;
+  padding: 2vh 2vw;
 }
 .large-card .card-name {
-  font-size: 150px;
-  background: #8af023;
-  margin: 7.66666667px;
-  height: 230px;
+  font-size: 40vh;
   text-align: center;
   color: #050505;
-  padding: 0 11.5px;
+  background: #71f04c;
+  height: 80vh;
+  width: 100%;
+}
+.large-card .card-back {
+  font-size: 40vh;
+  text-align: center;
+  color: #050505;
+  background: #71f04c;
+  height: 80vh;
+  width: 100%;
+  background: #71f04c url('../images/back.jpg') no-repeat center center;
 }
 .large-card .back {
-  font-size: 40px;
-  height: 40px;
+  font-size: 8vh;
+  height: 10vh;
 }
 .large-card .back a {
   display: inline-block;
-  height: 40px;
+  height: 10vh;
+  width: 100%;
   background: gray;
-  margin: 0 23px 23px 23px;
-  width: 200px;
-  font-size: 45px;
   text-decoration: none;
   text-align: center;
-  line-height: 40px;
+  line-height: 10vh;
   color: #050505;
 }
 .small-card {
-  width: 100px;
-  height: 100px;
-  background: #8af023;
-  margin: 10px;
+  width: 19vw;
+  height: 19vw;
+  background: #71f04c;
+  margin: 1.9vw;
   float: left;
 }
 .small-card a {
   display: inline-block;
-  width: 100px;
-  height: 100px;
-  font-size: 45px;
+  width: 19vw;
+  height: 19vw;
+  font-size: 9.5vw;
   text-decoration: none;
   text-align: center;
-  line-height: 100px;
+  line-height: 19vw;
   color: #050505;
 }
 

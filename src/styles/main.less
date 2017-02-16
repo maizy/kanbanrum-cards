@@ -10,14 +10,18 @@ body {
 .large-card {
   @card-height: 80vh;
   @card-width: 100%;
-  @base-font-size: 40vh;
   .card-name {
-    font-size: @base-font-size;
+    font-size: 40vh;
     text-align: center;
     color: @card-text-color;
     background: @card-color;
     height: @card-height;
     width: @card-width;
+  }
+
+  .card-back {
+    .card-name;
+    background: @card-color url('../images/back.jpg') no-repeat center center;
   }
 
   .back {

@@ -1,6 +1,6 @@
 {
   "name": "Kanbanrum-cards",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Kanbanrum Cards - Custom pocker cards for scrum pocker used in API Team at @hhru.",
   "license": "Apache-2.0",
   "main": "app.js",

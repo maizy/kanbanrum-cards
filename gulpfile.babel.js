@@ -23,8 +23,8 @@ const paths = {
   entry: 'src/Index.js',
   srcCss: 'src/**/*.less',
   srcLint: ['src/**/*.js', 'test/**/*.js', 'gulpfile.babel.js'],
-  dist: 'dist',
-  distJs: 'dist/js',
+  dist: 'docs',
+  distJs: 'docs/js',
 };
 
 const customOpts = {

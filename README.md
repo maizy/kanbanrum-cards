@@ -14,4 +14,4 @@ Kickstarting:
 ## Release
 
 * `npm install`
-* `npm run build`
+* `npm run release`

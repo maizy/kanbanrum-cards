@@ -11,8 +11,10 @@ function CardsGrid(props) {
   const cards = props.cards.map(card => <SmallCard card={card} key={card.get('id')} />);
   return (
     <div>
-      <h1>Cards</h1>
-      {cards}
+      <h1>Kanbanrum&#8482; Cards</h1>
+      <div className="cards-grid">
+        {cards}
+      </div>
     </div>
   );
 }

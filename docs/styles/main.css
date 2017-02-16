@@ -6640,8 +6640,47 @@ body {
   padding: 30px;
   margin: 30px;
 }
-.large-card {
-  font-size: 140px;
+.large-card .card-name {
+  font-size: 150px;
+  background: #8af023;
+  margin: 7.66666667px;
+  height: 230px;
+  text-align: center;
+  color: #050505;
+  padding: 0 11.5px;
+}
+.large-card .back {
+  font-size: 40px;
+  height: 40px;
+}
+.large-card .back a {
+  display: inline-block;
+  height: 40px;
+  background: gray;
+  margin: 0 23px 23px 23px;
+  width: 200px;
+  font-size: 45px;
+  text-decoration: none;
+  text-align: center;
+  line-height: 40px;
+  color: #050505;
+}
+.small-card {
+  width: 100px;
+  height: 100px;
+  background: #8af023;
+  margin: 10px;
+  float: left;
+}
+.small-card a {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  font-size: 45px;
+  text-decoration: none;
+  text-align: center;
+  line-height: 100px;
+  color: #050505;
 }
 
 /*# sourceMappingURL=main.css.map */

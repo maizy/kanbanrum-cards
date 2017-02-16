@@ -5,7 +5,57 @@ body {
   margin: 30px;
 }
 
+@base-card-font-size: 30px;
+@card-color: #8af023;
+@card-text-color: #050505;
 
 .large-card {
-  font-size: 140px;
+  @card-height: 230px;
+  .card-name {
+    font-size: 150px;
+    background: @card-color;
+    margin: @card-height / 30;
+    height: @card-height;
+    text-align: center;
+    color: @card-text-color;
+    padding: 0 @card-height / 20;
+  }
+
+  .back {
+    @back-height: 40px;
+    font-size: @back-height;
+    height: @back-height;
+    a {
+      display: inline-block;
+      height: @back-height;
+      background: gray;
+      margin: 0 @card-height / 10 @card-height / 10 @card-height / 10;
+      width: 200px;
+      font-size: @base-card-font-size * 1.5;
+      text-decoration: none;
+      text-align: center;
+      line-height: @back-height;
+      color: @card-text-color;
+    }
+  }
+}
+
+.small-card {
+  @card-height: 100px;
+  @card-width: 100px;
+  width: @card-width;
+  height: @card-height;
+  background: @card-color;
+  margin: @card-height / 10;
+  float: left;
+  a {
+    display: inline-block;
+    width: @card-width;
+    height: @card-height;
+    font-size: @base-card-font-size * 1.5;
+    text-decoration: none;
+    text-align: center;
+    line-height: @card-height;
+    color: @card-text-color;
+  }
 }

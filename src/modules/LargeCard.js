@@ -4,11 +4,15 @@
  */
 
 import React from 'react';
+import { Link } from 'react-router';
 
 function LargeCard(props) {
   return (
     <div className="large-card">
-      {props.card.get('name')}
+      <div className="card-name">{props.card.get('name')}</div>
+      <div className="back">
+        <Link to="/">&#x21A9;</Link>
+      </div>
     </div>
   );
 }

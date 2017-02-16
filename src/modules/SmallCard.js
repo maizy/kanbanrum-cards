@@ -8,8 +8,8 @@ import { Link } from 'react-router';
 
 function SmallCard(props) {
   return (
-    <div>
-      <Link to={`/card/${props.card.get('id')}`}>Card: {props.card.get('name')}</Link>
+    <div className="small-card">
+      <Link to={`/card/${props.card.get('id')}`}>{props.card.get('name')}</Link>
     </div>
   );
 }

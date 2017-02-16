@@ -23,6 +23,11 @@ const paths = {
   entry: 'src/Index.js',
   srcCss: 'src/**/*.less',
   srcLint: ['src/**/*.js', 'test/**/*.js', 'gulpfile.babel.js'],
+  dist: 'dist',
+  distJs: 'dist/js',
+};
+
+const releasePaths = {
   dist: 'docs',
   distJs: 'docs/js',
 };
@@ -131,6 +136,7 @@ gulp.task('build', cb => {
 });
 
 gulp.task('release', cb => {
+  Object.assign(paths, releasePaths);
   cb();
 });
 
